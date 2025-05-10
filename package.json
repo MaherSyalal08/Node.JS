@@ -1,0 +1,11 @@
+{
+  "name": "introduce-node-js",
+  "version": "1.0.0",
+  "description": "\"Pengenalan Node.js\"",
+  "main": "app01.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maher",
+  "license": "MIT"
+}

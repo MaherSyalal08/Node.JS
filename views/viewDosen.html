@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Dosen</title>
+  <link rel="stylesheet" href="/public/style.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="a">Admin</h2>
+            </div>
+
+            <div class="menu-item" onclick="toggleDropdown('dosen')">
+                Dosen
+            </div>
+            <div id="dropdown-dosen" class="dropdown-content">
+                <a href="/form-dosen" class="sub-item">Form Dosen</a>
+                <a href="/view-dosen" class="sub-item">Data Dosen</a>
+            </div>
+
+            <div class="menu-item" onclick="toggleDropdown('mahasiswa')">
+                Mahasiswa
+            </div>
+            <div id="dropdown-mahasiswa" class="dropdown-content">
+                <a href="/form-mahasiswa" class="sub-item">Form Mahasiswa</a>
+                <a href="/view-mahasiswa" class="sub-item">Data Mahasiswa</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="navbar">
+                <div class="logo"></div>
+            </div>
+
+            <div class="form-container">
+                <h2>Data Dosen</h2>
+                <table>
+                    <tr>
+                        <th>NIK</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                    </tr>
+                    <tr>
+                        <td>7272001</td>
+                        <td>Smith Joe</td>
+                        <td>jl. Babakan Jeruk</td>
+                    </tr>
+                    <tr>
+                        <td>7272002</td>
+                        <td>Doyoung</td>
+                        <td>Jl. Merdeka Raya No. 10</td>
+                    </tr>
+                    <tr>
+                        <td>7272003</td>
+                        <td>Michael</td>
+                        <td>Jl. Pahlawan 2, Block B</td>
+                    </tr>
+                    <tr>
+                        <td>7272004</td>
+                        <td>Jennie</td>
+                        <td>Jl. Cempaka 5, No. 12</td>
+                    </tr>
+                    <tr>
+                        <td>7272005</td>
+                        <td>Wonwoo</td>
+                        <td>Jl. Raya Timur 8</td>
+                    </tr>
+                    <tr>
+                        <td>7272006</td>
+                        <td>Suzy</td>
+                        <td>Jl. Kenanga No. 4, Block C</td>
+                    </tr>
+                    <tr>
+                        <td>7272007</td>
+                        <td>James Wilson</td>
+                        <td>Jl. Anggrek 7, RT 3</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown(section) {
+            const content = document.getElementById(`dropdown-${section}`);
+            content.style.display = content.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form Mahasiswa</title>
+  <link rel="stylesheet" href="/public/style.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="a">Admin</h2>
+            </div>
+
+            
+
+            <div class="menu-item" onclick="toggleDropdown('dosen')">
+                Dosen
+            </div>
+            <div id="dropdown-dosen" class="dropdown-content">
+                <a href="/form-dosen" class="sub-item">Form Dosen</a>
+                <a href="/view-dosen" class="sub-item">Data Dosen</a>
+            </div>
+
+            <div class="menu-item" onclick="toggleDropdown('mahasiswa')">
+                Mahasiswa
+            </div>
+            <div id="dropdown-mahasiswa" class="dropdown-content">
+                <a href="/form-mahasiswa" class="sub-item">Form Mahasiswa</a>
+                <a href="/view-mahasiswa" class="sub-item">Data Mahasiswa</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="navbar">
+                <div class="logo"></div>
+            </div>
+            <div class="form-container">
+                <h2>Form Mahasiswa</h2>
+                <form method="POST" action="/submit-mahasiswa">
+                    <label for="nrp">NRP</label>
+                    <input type="text" name="nrp" placeholder="e.g. your NRP" required />
+                    <label for="name">Name</label>
+                    <input type="text" name="nama" placeholder="e.g. your name" required autofocus />
+                    <label for="dosen_wali">Dosen Wali</label>
+                    <input type="text" name="dosen_wali" placeholder="e.g. your Dosen Wali" required />
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleDropdown(section) {
+            const content = document.getElementById(`dropdown-${section}`);
+            content.style.display = content.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
+</body>
+</html>

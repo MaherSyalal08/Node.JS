@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Mahasiswa</title>
+  <link rel="stylesheet" href="/public/style.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="a">Admin</h2>
+            </div>
+
+
+            <div class="menu-item" onclick="toggleDropdown('dosen')">
+              Dosen
+          </div>
+          <div id="dropdown-dosen" class="dropdown-content">
+              <a href="/form-dosen" class="sub-item">Form Dosen</a>
+              <a href="/view-dosen" class="sub-item">Data Dosen</a>
+          </div>
+
+            <div class="menu-item" onclick="toggleDropdown('mahasiswa')">
+                Mahasiswa
+            </div>
+            <div id="dropdown-mahasiswa" class="dropdown-content">
+                <a href="/form-mahasiswa" class="sub-item">Form Mahasiswa</a>
+                <a href="/view-mahasiswa" class="sub-item">Data Mahasiswa</a>
+            </div>
+
+            
+        </div>
+
+        <div class="main-content">
+            <div class="navbar">
+                <div class="logo"></div>
+            </div>
+            <div class="form-container">
+                <h2>Data Mahasiswa</h2>
+                <table>
+                    <tr>
+                        <th>NRP</th>
+                        <th>Name</th>
+                        <th>Dosen Wali</th>
+                    </tr>
+                    <tr>
+                        <td>2372001</td>
+                        <td>Anna</td>
+                        <td>Wonwoo</td> 
+                    </tr>
+                    <tr>
+                        <td>2372002</td>
+                        <td>Abiel</td>
+                        <td>Jennie</td> 
+                    </tr>
+                    <tr>
+                        <td>2372003</td>
+                        <td>Thesalonika</td>
+                        <td>Wonwoo</td> 
+                    </tr>
+                    <tr>
+                        <td>2372004</td>
+                        <td>Eric Mayadi</td>
+                        <td>Jennie</td> 
+                    </tr>
+                    <tr>
+                        <td>2372005</td>
+                        <td>Mingyu</td>
+                        <td>Wonwoo</td> 
+                    </tr>
+                    <tr>
+                        <td>2372006</td>
+                        <td>Maher</td>
+                        <td>Suzy</td> 
+                    </tr>
+                    <tr>
+                        <td>2372007</td>
+                        <td>Zalfa</td>
+                        <td>Suzy</td> 
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleDropdown(section) {
+            const content = document.getElementById(`dropdown-${section}`);
+            content.style.display = content.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
+</body>
+</html>

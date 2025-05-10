@@ -1,0 +1,158 @@
+/* General reset and body styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 150px;
+  background-color: #007BFF;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  gap: 20px;
+  z-index: 1001;
+  align-items: center; /* Center the content vertically */
+}
+
+.sidebar-header h2 {
+  text-align: center; /* Center the 'Admin' text */
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.menu-item {
+  background-color: white;
+  color: #007BFF;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%; /* pastikan dropdown juga selebar menu-item */
+}
+
+.sub-item {
+  background-color: #eaf4ff;
+  padding: 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #007BFF;
+  width: 100%; /* ini penting */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.menu-item a {
+  color: #007BFF;
+  text-decoration: none;
+  display: block;
+}
+
+.menu-item:hover {
+  background-color: #e0eaff;
+}
+
+.sub-item:hover {
+  background-color: #d0eaff;
+}
+
+form {
+  width: 100%;
+  max-width: 95%;
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  width: 100%;
+  max-width: 100%; 
+  box-sizing: border-box; 
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 25px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.main-content {
+  margin-left: 220px; 
+  margin-top: 50px;
+  padding: 20px;
+  display: block;
+  width: calc(100% - 220px);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #007bff;
+  z-index: 1000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #007BFF;
+  color: white;
+}
